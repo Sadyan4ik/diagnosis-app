@@ -1,0 +1,6 @@
+fastapi==0.128.0
+nltk==3.9.2
+torchtext==0.16.2
+uvicorn==0.40.0
+python-multipart==0.0.20
+prometheus-fastapi-instrumentator==6.1.0

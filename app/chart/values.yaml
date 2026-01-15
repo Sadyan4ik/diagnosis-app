@@ -1,0 +1,17 @@
+replicaCount: 2
+image:
+  repository: ghostbim21/diagnosis-app
+  tag: v2
+  pullPolicy: Always
+
+service:
+  # Способ получению доступа к VirtualBox с сетью NAT
+  type: NodePort
+  # Выставленный порт для Port Forwarding
+  port: 80
+
+ingress:
+  # Переключатель для создания Ingress ресурсов
+  enabled: true
+  # Адрес для подключения к хосту
+  host: diagnosis-app.local
