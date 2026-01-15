@@ -9,8 +9,8 @@ WORKDIR /app
 
 # Сначала копируем зависимости для кэширования слоев
 COPY requirements.txt .
-RUN pip install --no-cache-dir \
-    torch==2.1.2+cpu \
+RUN pip install --no-cache-dir --upgrade pip \
+    pip install --no-cache-dir torch==2.1.2+cpu \
     --index-url https://download.pytorch.org/whl/cpu
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
