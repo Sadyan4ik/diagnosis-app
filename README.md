@@ -4,6 +4,8 @@ docker build -t ghostbim21/diagnosis-app:v3 .
 docker login
 docker push ghostbim21/diagnosis-app:v3
 
+docker-compose up --build
+
 helm upgrade --install diagnosis-app ./chart
 helm upgrade diagnosis-app ./chart
 

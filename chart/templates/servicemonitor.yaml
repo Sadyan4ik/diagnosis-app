@@ -9,5 +9,5 @@ spec:
     matchLabels:
       app: diagnosis-service
   endpoints:
-    - port: http # Назовите так порт в service.yaml
+    - port: http
       path: /metrics

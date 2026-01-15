@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'diagnosis-app'
+    static_configs:
+      # host.docker.internal позволяет контейнеру достучаться до хоста
+      # Если приложение тоже в Docker, используйте имя сервиса из compose
+      - targets: ['app:8000']
