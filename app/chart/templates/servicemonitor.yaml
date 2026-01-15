@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: diagnosis-app-monitor
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: diagnosis-service
+  endpoints:
+    - port: http # Назовите так порт в service.yaml
+      path: /metrics
