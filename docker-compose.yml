@@ -10,7 +10,7 @@ services:
 
   # Prometheus
   prometheus:
-    image: quay.io/prometheus-operator/prometheus-config-reloader:v0.87.1
+    image: prom/prometheus:v2.45.0
     container_name: prometheus
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml

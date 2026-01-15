@@ -2,8 +2,7 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'diagnosis-app'
+  - job_name: 'diagnosis-service'
+    metrics_path: '/metrics'
     static_configs:
-      # host.docker.internal позволяет контейнеру достучаться до хоста
-      # Если приложение тоже в Docker, используйте имя сервиса из compose
-      - targets: ['app:8000']
+      - targets: ['app:8000'] #
